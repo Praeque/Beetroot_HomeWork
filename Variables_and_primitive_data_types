@@ -1,0 +1,23 @@
+#Variables and primitive data types
+#"Змінні та примітивні типи даних"
+
+    #   Task 1
+name='Denya'
+day='Sunday'
+print(f'Good day {name}! {day} is a perfect day to learn some python.')
+
+    #   Task2
+first_name='Denis'
+last_name='Alekseev'
+print(first_name,last_name)
+
+    #   Task3
+a=3
+b=6
+print(f'Addition:         a({a}) + b({b}) = ',a+b)
+print(f'Subtraction       a({a}) - b({b}) = ',a-b)
+print(f'Division          a({a}) / b({b}) = ',a/b)
+print(f'Multiplication    a({a}) * b({b}) = ',a*b)
+print(f'Exponent (Power)  a({a}) ** b({b}) = ',a**b)
+print(f'Modulus           a({a}) and  b({b}) = ',abs(a),abs(b))
+print(f'Floor division    a({a}) // b({b}) = ',a//b)
