@@ -2,9 +2,9 @@
 #"Змінні та примітивні типи даних"
 
     #   Task 1
-name='Denya'
+name='denya'
 day='Sunday'
-print(f'Good day {name}! {day} is a perfect day to learn some python.')
+print(f'Good day {name.title()}! {day} is a perfect day to learn some python.')
 
     #   Task2
 first_name='Denis'
