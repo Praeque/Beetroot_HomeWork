@@ -1,0 +1,38 @@
+def positive_number():  #function to securely enter a quantitative number
+    try:
+        return abs(int(input('(Print positive integer number):\n'))) #module in case you accidentally put a minus
+    except:
+        print(f"It`s no correct!\n{'Please ' }",end='')
+        return positive_number() #the function will open indefinitely until a number is entered
+def coffee_macine(cups=1): #innovative coffee machine function
+    print('Order your lucky coffee =)')
+    for i in range(cups):
+        print('- How many coffee beans to use?')
+        count_seads=positive_number()
+        print('- How many sugar cubes to add?')
+        count_sugar=positive_number()
+        print('- Whether to add milk? (print 0 for "yes" or 1 for "no")')
+        is_milk=positive_number()
+        coffee=[]
+        if count_seads == 0:
+            coffee+=['decaffeinated']
+        elif count_seads==1 or count_seads==2:
+            coffee+=['light']
+        elif count_seads==3 or count_seads==4:
+            coffee+=['strong']
+        elif count_seads>=5:
+            coffee+=['very strong']
+        if is_milk>0:
+            coffee+=['latte']
+        elif is_milk==0:
+            coffee+=['americano']
+        if count_sugar==0:
+            coffee+=['without sugar(a good choice)']
+        elif count_sugar>0:
+            coffee+=[f'with {count_sugar} cubes of sugar']
+        print(f'\n  *  Thank you for your order =)\n  *  Your {coffee[0]} {coffee[1]} {coffee[2]} will be ready in 2 minutes =)',end='\n\n')
+        if i+1!=cups:
+            print(' What about next cup?\n')
+    print('Have a nice day, come again! = )')
+print('Hello, nice to see you. How many cups of coffee do you want?')
+coffee_macine(positive_number()) #calling the coffee machine function with a request for the number of cups
