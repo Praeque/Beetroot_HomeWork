@@ -1,0 +1,16 @@
+def anti_cheat(users):
+    for user in users:
+        user_data=user.split(',')
+        if len(user_data)<4:
+            print(f"data of user({user}) is invalid")
+            break
+        user_id=user_data[0]
+        user_name=user_data[1]
+        user_balance = int(user_data[2])
+        user_level = int(user_data[3])
+        if user_level<10 and  user_balance>100 or user_level<23 and  user_balance>13500:
+            print(f"user {user_name} ({user_id}) is cheater!! ")
+        else:
+            print(f"user {user_name} ({user_id}) is Alfastar!! ")
+a= ['321, Hello, 200, 1',  '2, Harry Potter, 101, 9',  '4, Nik, 34000, 1000', '51, Logan, 100, 10',  '10000004, Lanos, 13500, 23',  '23, CyberGiant, 13501, 23']
+anti_cheat(a)
