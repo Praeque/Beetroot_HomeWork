@@ -1,0 +1,45 @@
+import random
+
+def Task1():
+    string=input('Print your string:\n')
+    if len(string)<2:
+        print('Not enough elements')
+        print('')
+    else:
+        print(string[:2]+string[-2:])
+#Task1()
+
+def Task2():
+    number=input('Print number:\n')
+
+    if number.isdigit() and len(number)==10:
+        print("Number is ok.")
+    else:
+        print("Invalid number!")
+        if not number.isdigit():
+            print("Number can only have digits!")
+        if len(number)!=10:
+            print('Length of number should be 10!')
+#Task2()
+
+def Task3():
+    a=random.randint(1,100)
+    b=random.randint(1,100)
+    answer=int(input(f'Print answer of this expression:\n{a} + {b} =  '))
+    if answer==a+b:
+        print('You are right!')
+    else:
+        print('You are wrong!')
+        print(f'{a} + {b} = {a+b}')
+#Task3()
+
+def Task4():
+    name_of_my_teacher="aleksandr"
+    name_of_user=input('Print your name(russian style, in english):\n').lower()
+    if name_of_user==name_of_my_teacher:
+        print('Hello my teacher!')
+    else:
+        print('You are not my teacher')
+        print(f'Name of my teacher is {name_of_my_teacher.title()}')
+    return name_of_user==name_of_my_teacher
+#Task4()
